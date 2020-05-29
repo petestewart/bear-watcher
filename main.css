@@ -1,3 +1,10 @@
 body {
     background-color: bisque;
 }
+
+#form {
+    align-items: center;
+    background-color: lightgrey;
+    padding: 15px;
+    width: 75%;
+}
