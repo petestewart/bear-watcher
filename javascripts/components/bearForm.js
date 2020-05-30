@@ -7,6 +7,8 @@ const addToRiverEvent = (e) => {
     const newBearObject = {
         name: (e.srcElement.form[0].value),
         image: (e.srcElement.form[1].value),
+        fishAttempts: [],
+        success: 0
     }
     river.addToRiver(newBearObject);
 }
