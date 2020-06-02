@@ -11,18 +11,24 @@ const addToRiverEvent = (e) => {
         success: 0
     }
     river.addToRiver(newBearObject);
+    makeForm();
 }
 
 const makeForm = () => {
+    const river=riverData.getRiver();
+    const newBearNumber = river.length + 1;
     const domString = `
-    <form id="create-bear-form">
+    <form id="create-bear-form" >
+    <div id="form-title">
+      Enter information below to add a new bear to the database:
+    </div>
     <div class="form-group">
       <label for="formInputName">Bear name</label>
-      <input type="text" class="form-control" id="formInputName" placeholder="Winnie The Pooh">
+      <input type="text" class="form-control" id="formInputName" value="Bear ${newBearNumber}">
     </div>
     <div class="form-group">
     <label for="formInputURL">Image URL</label>
-    <input type="text" class="form-control" id="formInputURL" placeholder="http://">
+    <input type="text" class="form-control" id="formInputURL" value="https://pbs.twimg.com/profile_images/739220138679894017/MJa0Bu4j_400x400.jpg">
     <small id="formURLHelp" class="form-text text-muted">Images must be GIF, JPG, or PNG.</small>
     </div>
     <button type="submit" class="btn btn-primary" id="submit-button">Submit</button>
