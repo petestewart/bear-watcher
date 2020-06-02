@@ -3,18 +3,29 @@ import riverData from '../helpers/data/riverData.js'
 
 const river = riverData.getRiver();
 
+const createFishingHistory = (bearIndex) => {
+  let domString = `
+      <p class="bear-history-summary">Success/Attempts: ${river[bearIndex].success}/${river[bearIndex].fishAttempts.length} </p>
+      <p>Fishing History:  
+      <ol>`;
+  for (let i = 0; i < river[bearIndex].fishAttempts.length; i++) {
+    domString += `<li>${river[bearIndex].fishAttempts[i]}</li>`
+  };
+  domString +='</ol></p>';
+  return domString;
+}
 
 const addSuccessfulFishingAttempt = (event) => {
   const bearIndex = Number((event.target.id).replace('success', ''));
-  river[bearIndex].fishAttempts++;
   river[bearIndex].success++;
-  console.log(river);
+  river[bearIndex].fishAttempts.push(`🐟 ${utilities.getDate()}`);
+  $(`#history-area-${bearIndex}`).html(createFishingHistory(bearIndex));
 }
 
 const addFailedFishingAttempt = (event) => {
   const bearIndex = Number((event.target.id).replace('failure', ''));
-  river[bearIndex].fishAttempts++;
-  console.log(river);
+  river[bearIndex].fishAttempts.push(`⛔️ ${utilities.getDate()}`);
+  $(`#history-area-${bearIndex}`).html(createFishingHistory(bearIndex));
 }
 
 const buildCard = (bear, index) => {
@@ -51,8 +62,8 @@ const buildCard = (bear, index) => {
             </h5>
           </div>
           <div id="collapse-history-${index}" class="collapse" aria-labelledby="history-heading-${index}" data-parent="#accordion">
-            <div class="card-body">
-              FISHING HISTORY WILL GO HERE
+            <div class="card-body" id="history-area-${index}">
+            ${createFishingHistory(index)}
             </div>
           </div>
         </div>
