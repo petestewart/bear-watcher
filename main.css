@@ -1,5 +1,5 @@
 body {
-    background-color: bisque;
+    background-color: darkolivegreen;
 }
 
 #form {
@@ -7,4 +7,38 @@ body {
     background-color: lightgrey;
     padding: 15px;
     width: 75%;
+    margin: 20px auto;
+}
+
+#river {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 80%;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+.entire-bear-card {
+    min-width: 286px;
+    margin: 10px;
+}
+
+header {
+    min-width: 943px;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-text {
+    padding: 30px;
+    font-size: 1.5em;
+    color: white;
+    text-transform: uppercase;
+}
+
+#form-title {
+    font-weight: bold;
+    margin: 10px 0px;
 }

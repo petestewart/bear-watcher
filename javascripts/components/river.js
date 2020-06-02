@@ -30,6 +30,7 @@ const addFailedFishingAttempt = (event) => {
 
 const buildCard = (bear, index) => {
     const domString = `
+    <div class="entire-bear-card">
     <div class="card" style="width: 18rem;">
       <img class="card-img-top" src="${bear.image}" alt="Bearvatar">
       <div class="card-body">
@@ -68,6 +69,7 @@ const buildCard = (bear, index) => {
           </div>
         </div>
       </div>
+    </div>
     </div>
     `;
     return domString;
