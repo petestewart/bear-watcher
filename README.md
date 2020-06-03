@@ -6,7 +6,7 @@ This site is being created for the purpose of tracking brown bears in the Katmai
 This project is an assignment as part of my course at [Nashville Software School](http://nashvillesoftwareschool.com/) to learn how to use Javascript modules.
 
 ## Features
-* Allows user to input a bearn name and image to create a new bear
+* Allows user to input a bear name and image to create a new bear
 * Displays all info of currently tracked bears on cards
 
 ## Screenshot
