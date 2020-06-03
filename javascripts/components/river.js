@@ -32,14 +32,25 @@ const fatBearList = () => {
     }
   }
   let domString = '<ul>';
+  let trophy = 0;
   for (let i = 0; i < winners.length; i++) {
     if (i === 0 || winners[i].fish !== winners[i-1].fish) {
-      let trophy = i;
+      trophy = i;
     }
+
+    else if (i>1) {
+      if (winners[i].fish === winners[0].fish) {
+        trophy = 0;
+      }
+      else if (winners[i].fish === winners[i-1].fish) {
+        trophy = 1;
+      }
+    }
+    
     else {
-      let trophy = (i-1);
+      trophy = (i-1);
     }
-    domString += `<li><i class="fas fa-trophy trophy${i}"></i> ${winners[i].name} (${winners[i].fish} fish)</li>`    
+    domString += `<li><i class="fas fa-trophy trophy${trophy}"></i> ${winners[i].name} (${winners[i].fish} fish)</li>`    
   }
 
   domString += '</ul>'
