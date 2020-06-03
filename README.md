@@ -1,16 +1,17 @@
 # Bear Watcher
-![stability-wip](https://img.shields.io/badge/stability-work_in_progress-lightgrey.svg)
 
-This site is being created for the purpose of tracking brown bears in the Katmai National Park congregate along the Brooks River. It is being designed as a utility with scientists and park rangers in mind.
+This site was created for the purpose of tracking brown bears in the Katmai National Park congregate along the Brooks River. It designed as a utility with scientists and park rangers in mind.
 
-This project is an assignment as part of my course at [Nashville Software School](http://nashvillesoftwareschool.com/) to learn how to use Javascript modules.
+This project was an assignment as part of my course at [Nashville Software School](http://nashvillesoftwareschool.com/) to learn how to use Javascript modules.
 
 ## Features
-* Allows user to input a bear name and image to create a new bear
-* Displays all info of currently tracked bears on cards
+* Allows user to input a bear name and avatar image to create a new bear
+* By default the form gives a bear name and avatar the user can use
+* Allows user to add fishing attempts and view each bear's timestamped history with success rate
+* Displays a list of the Top 3 (or 4, in the case of a tie for 3rd place) "fattest bears" with color coded trophies
 
 ## Screenshot
-(forthcoming)
+![screenshot](./images/screenshot.png)
 
 ## Installation
 * Clone this repo to your local machine using `https://github.com/petestewart72/bear-watcher`
@@ -21,10 +22,3 @@ This project is an assignment as part of my course at [Nashville Software School
 
 ## Technologies Used
 [![Vanilla JavaScript](https://img.shields.io/badge/JavaScript-2c9fcc?style=flat-square)](#) [![HTML](https://img.shields.io/badge/-HTML-2c9fcc?style=flat-square)](#) [![CSS](https://img.shields.io/badge/-CSS-2c9fcc?style=flat-square)](#)
-
-### Backlog
-- [ ] Create user form
-- [ ] Create submit function
-- [ ] Display bear cards
-- [ ] Add fishing tracking functionality
-- [ ] Add Fattest Bear Award functionality
