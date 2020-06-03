@@ -3,11 +3,24 @@ body {
 }
 
 #form {
-    align-items: center;
+    /* align-items: center; */
     background-color: lightgrey;
     padding: 15px;
-    width: 75%;
+    width: 50%;
     margin: 20px auto;
+}
+
+#top-area {
+    display: flex;
+}
+
+#fat-award {
+    background-color: black;
+    padding: 15px;
+    width: 25%;
+    margin: 20px auto;
+    color: white;
+    font-size: 2em;
 }
 
 #river {
@@ -33,12 +46,32 @@ header {
 
 .header-text {
     padding: 30px;
-    font-size: 1.5em;
+    font-size: 2.2em;
     color: white;
     text-transform: uppercase;
 }
 
-#form-title {
+.form-title {
     font-weight: bold;
     margin: 10px 0px;
+}
+
+.fat-bear {
+    margin: 5px;
+}
+
+#fat-winners ul {
+    list-style: none;
+}
+
+.trophy0 {
+    color: gold;
+}
+
+.trophy1 {
+    color: silver
+}
+
+.trophy2 {
+    color: brown;
 }

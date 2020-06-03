@@ -1,6 +1,7 @@
 import utilities from '../helpers/utilities.js';
 import riverData from '../helpers/data/riverData.js';
 import river from '../components/river.js';
+// import fatBear from '../components/fatBearAward.js'
 
 const addToRiverEvent = (e) => {
     e.preventDefault();
@@ -19,7 +20,7 @@ const makeForm = () => {
     const newBearNumber = river.length + 1;
     const domString = `
     <form id="create-bear-form" >
-    <div id="form-title">
+    <div class="form-title">
       Enter information below to add a new bear to the database:
     </div>
     <div class="form-group">
@@ -37,5 +38,9 @@ const makeForm = () => {
     utilities.printToDom('#form', domString);
     document.querySelector('#submit-button').addEventListener('click', addToRiverEvent)
 }
+
+// let fatBears = fatBearList();
+
+// console.log(fatBears);
 
 export default { makeForm };
